@@ -1,0 +1,512 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a, .sign-up-btn {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.sign-up-btn {
+    background-color: #007bff;
+    color: #fff;
+    padding: 8px 15px;
+    border-radius: 3px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    font-size: 1em;
+}
+
+/* Main Content Styling */
+main {
+    padding: 20px;
+}
+
+.intro {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.intro h1 {
+    font-size: 2.5em;
+    color: #0073b1;
+    margin-bottom: 10px;
+}
+
+.intro h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.intro p {
+    margin-bottom: 30px;
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.primary-button, .secondary-button {
+    background-color: #ff7f00;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.secondary-button {
+    background-color: #ffa07a; /* Different color for differentiation */
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+}
+
+.stat-item {
+    background-color: #0073b1;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 150px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.stat-item h3 {
+    font-size: 2em;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    font-size: 1em;
+}
+
+
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; /* Ensure the modal is on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 30px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+/* Sign Up Form Styling */
+.modal form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal form label {
+    font-weight: bold;
+}
+
+.modal form input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal form button {
+    background-color: #0073b1;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+/* Buy Training Plans Modal Styling */
+.buy-training-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.buy-training-content h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0073b1;
+}
+
+.training-image {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.buy-training-content p {
+    text-align: center;
+    line-height: 1.6;
+}
+
+.training-options {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.training-option {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.training-option h3 {
+    margin-bottom: 10px;
+    color: #0073b1;
+}
+
+.training-option p {
+    margin-bottom: 10px;
+    line-height: 1.4;
+}
+
+.buy-button {
+    background-color: #ff7f00;
+    color: #fff;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.container h1 .highlight {
+    color: #007bff;
+}
+
+.sub-heading {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.plans {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.plan {
+    background-color: #f8f8f8;
+    padding: 1.5rem;
+    border-radius: 5px;
+    max-width: 300px;
+    text-align: center;
+    flex: 1;
+    min-width: 250px;
+}
+
+.plan .badge {
+    background-color: #28a745;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.plan .price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.plan .price .original-price {
+    text-decoration: line-through;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+    color: #888;
+}
+
+.plan .price .discounted-price {
+    color: #007bff;
+}
+
+.plan h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.plan p.description {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+}
+
+.plan .btn-add-to-cart {
+    background-color: #007bff;
+    color: white;
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.plan .session-time {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.btn-add-to-cart {
+    background-color: #00aa88;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+    background-color: #008866;
+}
+
+.checkout-container {
+    margin-top: 40px;
+}
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.checkout-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.billing-details {
+    flex: 1;
+    margin-right: 20px;
+}
+
+.billing-details h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+input[type="text"], input[type="email"], input[type="number"] {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.shopping-bag {
+    flex: 1;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.shopping-bag h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.item-name {
+    flex: 1;
+}
+
+.item-name .price {
+    margin-left: 10px;
+    color: #00aa88;
+}
+
+.quantity-controls {
+    display: flex;
+    align-items: center;
+}
+
+.quantity-controls button {
+    background-color: #ddd;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.quantity-controls input {
+    width: 50px;
+    text-align: center;
+    margin: 0 5px;
+    padding: 5px;
+}
+
+.add-coupon a {
+    color: #00aa88;
+    text-decoration: none;
+}
+
+.totals {
+    margin-top: 20px;
+}
+
+.total-row {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.grand-total {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.checkout-button {
+    width: 100%;
+    background-color: #00aa88;
+    color: #fff;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.checkout-button:hover {
+    background-color: #008866;
+}
+
+.terms {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.terms a {
+    color: #00aa88;
+    text-decoration: none;
+}
